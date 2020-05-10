@@ -77,6 +77,9 @@ target 'CenteRestructure' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
+  # Vector Icons
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
   target 'CenteRestructureTests' do
     inherit! :complete
     # Pods for testing

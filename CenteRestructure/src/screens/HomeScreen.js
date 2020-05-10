@@ -54,9 +54,9 @@ class HomeScreen extends Component {
           <Left>
             <Button
               transparent
-              onPress={() => this.props.navigation.openDrawer()}>
+              onPress={() => this.props.navigation.navigate('Welcome')}>
               <Icon
-                name="menu"
+                name="md-arrow-back"
                 style={{color: Platform.OS === 'ios' ? '#bacf32' : '#bacf32'}}
               />
             </Button>
@@ -70,7 +70,7 @@ class HomeScreen extends Component {
           <Right>
             <Button
               transparent
-              onPress={() => this.props.navigation.navigate('LibraryScreen')}>
+              onPress={() => this.props.navigation.navigate('Restructure')}>
               <Icon
                 name="paper"
                 style={{color: Platform.OS === 'ios' ? '#bacf32' : '#bacf32'}}
@@ -99,7 +99,7 @@ class HomeScreen extends Component {
             </View>
 
             <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Popular</Text>
+              <Text style={styles.sectionTitle}>Popular Products</Text>
               <ScrollView
                 horizontal={true}
                 showsHorizontalScrollIndicator={false}
@@ -138,7 +138,7 @@ class HomeScreen extends Component {
                       padding: 10,
                       fontWeight: 'bold',
                     }}>
-                    Presidential Age Limit
+                    CenteXpress
                   </Text>
                 </TouchableOpacity>
                 <TouchableOpacity
@@ -168,7 +168,7 @@ class HomeScreen extends Component {
                       padding: 10,
                       fontWeight: 'bold',
                     }}>
-                    Social Media Tax(OTT)
+                    CenteMobile
                   </Text>
                 </TouchableOpacity>
                 <TouchableOpacity
@@ -241,25 +241,19 @@ class HomeScreen extends Component {
               vertical
               active
               style={{backgroundColor: Platform.OS === 'ios' ? Colors.white : '#bacf32'}}
-              onPress={() => this.props.navigation.navigate('HomeScreen')}>
+              onPress={() => this.props.navigation.navigate('Home')}>
               <Icon active name="home" style={{color: Platform.OS === 'ios' ? '#bacf32' : Colors.white}} />
               <Text style={{fontSize: 10, color: Platform.OS === 'ios' ? '#bacf32' : Colors.white}}>Home</Text>
             </Button>
             <Button
               vertical
-              onPress={() => this.props.navigation.navigate('LibraryScreen')}>
+              onPress={() => this.props.navigation.navigate('Restructure')}>
               <Icon name="paper" style={{color: Platform.OS === 'ios' ? 'grey' : Colors.lighter}} />
               <Text style={{fontSize: 10, color: Platform.OS === 'ios' ? 'grey' : Colors.lighter}}>Restructure</Text>
             </Button>
             <Button
               vertical
-              onPress={() => this.props.navigation.navigate('ProfileScreen')}>
-              <Icon name="person" style={{color: Platform.OS === 'ios' ? 'grey' : Colors.lighter}} />
-              <Text style={{fontSize: 10, color: Platform.OS === 'ios' ? 'grey' : Colors.lighter}}>News</Text>
-            </Button>
-            <Button
-              vertical
-              onPress={() => this.props.navigation.navigate('MoreScreen')}>
+              onPress={() => this.props.navigation.navigate('Help')}>
               <Icon name="more" style={{color: Platform.OS === 'ios' ? 'grey' : Colors.lighter}} />
               <Text style={{fontSize: 10, color: Platform.OS === 'ios' ? 'grey' : Colors.lighter}}>Help</Text>
             </Button>
