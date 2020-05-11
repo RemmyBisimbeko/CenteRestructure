@@ -51,11 +51,11 @@ class RestructureSuccess extends Component {
           <Left>
             <Button transparent
               onPress={() => this.props.navigation.navigate("Restructure")}>
-              <Icon name='md-arrow-back' style={{color: Platform.OS === "ios" ? '#bacf32' : '#bacf32'}}/>
+              <Icon name='md-arrow-back' style={{color: Platform.OS === "ios" ? '#1269B1' : '#1269B1'}}/>
             </Button>
           </Left>
           <Body>
-            <Title style={{color: Platform.OS === "ios" ? '#bacf32' : '#bacf32'}}>Loan</Title>
+            <Title style={{color: Platform.OS === "ios" ? '#1269B1' : '#1269B1'}}>Loan</Title>
           </Body>
           <Right>
           </Right>

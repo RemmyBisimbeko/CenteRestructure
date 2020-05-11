@@ -14,8 +14,7 @@ import WelcomeScreen from './src/screens/WelcomeScreen';
 import HomeScreen from './src/screens/HomeScreen';
 import RestructureScreen from './src/screens/RestructureScreen';
 import HelpScreen from './src/screens/HelpScreen';
-// Components
-import RestructureSuccess from './src/screens/RestructureSuccess';
+import SuccessScreen from './src/screens/SuccessScreen';
 
 export default function App() {
   const Stack = createStackNavigator();
@@ -26,8 +25,7 @@ export default function App() {
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Restructure" component={RestructureScreen} />
         <Stack.Screen name="Help" component={HelpScreen} />
-        {/* Components */}
-        <Stack.Screen name="Success" component={RestructureSuccess} />
+        <Stack.Screen name="Success" component={SuccessScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -42,10 +42,7 @@ class HomeScreen extends Component {
     this.backHandler.remove();
   }
 
-  handleBackPress = () => {
-    BackHandler.exitApp();
-    return true;
-  };
+  
 
   render() {
     return (
@@ -57,13 +54,13 @@ class HomeScreen extends Component {
               onPress={() => this.props.navigation.navigate('Welcome')}>
               <Icon
                 name="md-arrow-back"
-                style={{color: Platform.OS === 'ios' ? '#bacf32' : '#bacf32'}}
+                style={{color: Platform.OS === 'ios' ? '#1269B1' : '#1269B1'}}
               />
             </Button>
           </Left>
           <Body>
             <Title
-              style={{color: Platform.OS === 'ios' ? '#bacf32' : '#bacf32'}}>
+              style={{color: Platform.OS === 'ios' ? '#1269B1' : '#1269B1'}}>
               Home
             </Title>
           </Body>
@@ -73,7 +70,7 @@ class HomeScreen extends Component {
               onPress={() => this.props.navigation.navigate('Restructure')}>
               <Icon
                 name="paper"
-                style={{color: Platform.OS === 'ios' ? '#bacf32' : '#bacf32'}}
+                style={{color: Platform.OS === 'ios' ? '#1269B1' : '#1269B1'}}
               />
             </Button>
           </Right>
@@ -91,8 +88,8 @@ class HomeScreen extends Component {
           <View style={styles.body}>
             <View style={styles.logoContainer}>
                 <Image
-                  style={{width: '100%', height: 300}}
-                  source={require('../images/homecover.png')}
+                  style={{width: '100%', height: 320, paddinging: 20}}
+                  source={require('../images/mapeeraHouse.jpg')}
                 />
 
               </View>
@@ -119,9 +116,42 @@ class HomeScreen extends Component {
                     borderRadius: 20,
                     shadowOpacity: 0.5,
                   }}
-                  onPress={()=>this.props.navigation.navigate("CasesContainer")}>
+                  onPress={()=>this.props.navigation.navigate("Restructure")}>
                   <Image
-                    source={require('../images/PresidentialAgelimit.png')}
+                    source={require('../images/CenteXpress.png')}
+                    // eslint-disable-next-line react-native/no-inline-styles
+                    style={{
+                      height: 100,
+                      width: '100%',
+                      borderTopLeftRadius: 20,
+                      borderTopRightRadius: 20,
+                    }}
+                  />
+                  <Text
+                    style={{
+                      paddingHorizontal: 10,
+                      padding: 10,
+                      fontWeight: 'bold',
+                      padding: 10,
+                      fontWeight: 'bold',
+                    }}>
+                    Restructure
+                  </Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                  style={{
+                    width: 150,
+                    height: 150,
+                    backgroundColor: Colors.white,
+                    marginHorizontal: 10,
+                    marginTop: 10,
+                    marginBottom: 10,
+                    borderRadius: 20,
+                    shadowOpacity: 0.5,
+                  }}
+                  onPress={()=>this.props.navigation.navigate("Help")}>
+                  <Image
+                    source={require('../images/CenteXpress.png')}
                     // eslint-disable-next-line react-native/no-inline-styles
                     style={{
                       height: 100,
@@ -152,7 +182,7 @@ class HomeScreen extends Component {
                     borderRadius: 20,
                     shadowOpacity: 0.5,
                   }}
-                  onPress={()=>this.props.navigation.navigate("TemplatesContainer")}>
+                  onPress={()=>this.props.navigation.navigate("Help")}>
                   <Image
                     source={require('../images/Socialmediatax.jpg')}
                     style={{
@@ -182,9 +212,9 @@ class HomeScreen extends Component {
                     borderRadius: 20,
                     shadowOpacity: 0.5,
                   }}
-                  onPress={()=>this.props.navigation.navigate("LawsContainer")}>
+                  onPress={()=>this.props.navigation.navigate("Help")}>
                   <Image
-                    source={require('../images/CraneBankVsBOU.jpg')}
+                    source={require('../images/aviation.png')}
                     style={{
                       height: 100,
                       width: '100%',
@@ -198,7 +228,7 @@ class HomeScreen extends Component {
                       padding: 10,
                       fontWeight: 'bold',
                     }}>
-                    Crane Bank Vs BOU
+                    Cente Swift
                   </Text>
                 </TouchableOpacity>
                 <TouchableOpacity
@@ -212,9 +242,9 @@ class HomeScreen extends Component {
                     borderRadius: 20,
                     shadowOpacity: 0.5,
                   }}
-                  onPress={()=>this.props.navigation.navigate("ProceduresContainer")}>
+                  onPress={()=>this.props.navigation.navigate("Help")}>
                   <Image
-                    source={require('../images/arbitration.png')}
+                    source={require('../images/bankruptcy.png')}
                     style={{
                       height: 100,
                       width: '100%',
@@ -228,34 +258,35 @@ class HomeScreen extends Component {
                       padding: 10,
                       fontWeight: 'bold',
                     }}>
-                    Procedures
+                    Mobile Loan
                   </Text>
                 </TouchableOpacity>
               </ScrollView>
+                    
             </View>
         </ScrollView>
 
         <Footer>
-          <FooterTab style={{backgroundColor: Platform.OS === 'ios' ? Colors.white : '#bacf32'}}>
+          <FooterTab style={{backgroundColor: Colors.white}}>
             <Button
               vertical
               active
-              style={{backgroundColor: Platform.OS === 'ios' ? Colors.white : '#bacf32'}}
+              style={{backgroundColor: Colors.white}}
               onPress={() => this.props.navigation.navigate('Home')}>
-              <Icon active name="home" style={{color: Platform.OS === 'ios' ? '#bacf32' : Colors.white}} />
-              <Text style={{fontSize: 10, color: Platform.OS === 'ios' ? '#bacf32' : Colors.white}}>Home</Text>
+              <Icon active name="home" style={{color: '#1269B1'}} />
+              <Text style={{fontSize: 10, color: '#1269B1'}}>Home</Text>
             </Button>
             <Button
               vertical
               onPress={() => this.props.navigation.navigate('Restructure')}>
-              <Icon name="paper" style={{color: Platform.OS === 'ios' ? 'grey' : Colors.lighter}} />
-              <Text style={{fontSize: 10, color: Platform.OS === 'ios' ? 'grey' : Colors.lighter}}>Restructure</Text>
+              <Icon name="paper" style={{color: 'grey'}} />
+              <Text style={{fontSize: 10, color: 'grey'}}>Restructure</Text>
             </Button>
             <Button
               vertical
               onPress={() => this.props.navigation.navigate('Help')}>
-              <Icon name="more" style={{color: Platform.OS === 'ios' ? 'grey' : Colors.lighter}} />
-              <Text style={{fontSize: 10, color: Platform.OS === 'ios' ? 'grey' : Colors.lighter}}>Help</Text>
+              <Icon name="more" style={{color: 'grey'}} />
+              <Text style={{fontSize: 10, color: 'grey'}}>Help</Text>
             </Button>
           </FooterTab>
         </Footer>

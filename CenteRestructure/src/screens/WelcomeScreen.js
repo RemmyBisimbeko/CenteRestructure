@@ -79,12 +79,12 @@ class WelcomeScreen extends Component {
           source={require('../images/launchScreen.png')}>
           <Image
             style={{
-              width: '60%',
-              height: '30%',
-              marginBottom: 250, 
+              width: 150,
+              height: 150,
+              marginBottom: 280, 
               paddingTop: 50
             }}
-            source={require('../images/bm-transparent.png')}
+            source={require('../images/centelogo.png')}
           />
 
           <Text style={styles.sectionDescription}>
@@ -97,7 +97,7 @@ class WelcomeScreen extends Component {
             style={{
               borderRadius: 20,
               marginHorizontal: 20,
-              backgroundColor: '#bacf32',
+              backgroundColor: '#1269B1',
             }}
             onPress={() => this.props.navigation.navigate('Home')}>
             <Text style={styles.loginHighlight}>CONTINUE</Text>
@@ -185,3 +185,4 @@ const styles = StyleSheet.create({
 });
 
 export default WelcomeScreen;
+

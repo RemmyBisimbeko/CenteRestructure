@@ -1,236 +1,39 @@
+/* eslint-disable react-native/no-inline-styles */
 import React, {Fragment, Component} from 'react';
 import {
-  SafeAreaView,
   StyleSheet,
   ScrollView,
   View,
+  Image,
+  TouchableOpacity,
   Text,
-  StatusBar,
   BackHandler,
+  Alert,
+  ImageBackground,
 } from 'react-native';
 
 import {
   Header,
   Left,
-  Button,
-  Title,
-  Icon,
-  Body,
   Right,
-  Form,
-  Item,
-  Input,
+  Body,
+  Title,
+  Button,
+  Icon,
+  Footer,
+  FooterTab,
   Tab,
-  Tabs,
-  Footer, FooterTab, Textarea
+  Tabs, Form, Item, Input, Textarea
 } from 'native-base';
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
-
-class Restructure extends Component {
-  constructor(props) {
-    super(props);
-  //   var user = firebase.auth().currentUser;
-
-  //   if (user != null) {
-  //     uid = user.uid;
-  //     console.log(user.uid);
-
-  //   this.ref = firebase
-  //     .firestore()
-  //     .collection('paymentinfo')
-  //     .doc(user.uid);
-  //   this.state = {
-  //     name: '',
-  //     cardnumber: '',
-  //     cvc: '',
-  //     expirationdate: '',
-  //     address: '',
-  //   };
-  // }
-}
-    
-  // name(value) {
-  //   this.setState({name: value});
-  // }
-
-  // cardnumber(value) {
-  //   this.setState({cardnumber: value});
-  // }
-
-  // cvc(value) {
-  //   this.setState({cvc: value});
-  // }
-
-  // expirationdate(value) {
-  //   this.setState({expirationdate: value});
-  // }
-
-  // address(value) {
-  //   this.setState({address: value});
-  // }
-
-  // payCardHandler() {
-  //   this.ref.set({
-  //     name: this.state.name,
-  //     cardnumber: this.state.cardnumber,
-  //     cvc: this.state.cvc,
-  //     expirationdate: this.state.expirationdate,
-  //     address: this.state.address,
-  //   });
-
-  //   this.setState({
-  //     name: '',
-  //     cardnumber: '',
-  //     cvc: '',
-  //     expirationdate: '',
-  //     address: '',
-  //   });
-  // }
-
-  render() {
-    return (
-      <Fragment>
-        <StatusBar barStyle="dark-content" />
-        <SafeAreaView>
-          <ScrollView
-            contentInsetAdjustmentBehavior="automatic"
-            style={styles.scrollView}>
-            {global.HermesInternal == null ? null : (
-              <View style={styles.engine}>
-                <Text style={styles.footer}>Engine: Hermes</Text>
-              </View>
-            )}
-            <View style={styles.body}>
-              <View style={styles.sectionContainer}>
-                <Form>
-                  <Item floatingLabel rounded style={{borderRadius: 20}}>
-                    <Input
-                      autoCorrect={false}
-                      autoCapitalize="none"
-                      // value={this.state.name}
-                      // onChangeText={name => this.setState({name})}
-                      placeholder="Name"
-                    />
-                  </Item>
-
-                  <Item floatingLabel rounded style={{borderRadius: 20}}>
-                    <Input
-                      autoCorrect={false}
-                      autoCapitalize="none"
-                      // value={this.state.cardnumber}
-                      // onChangeText={cardnumber => this.setState({cardnumber})}
-                      placeholder="Account Number"
-                    />
-                  </Item>
-
-                  <Item floatingLabel rounded style={{borderRadius: 20}}>
-                    <Input
-                      autoCorrect={false}
-                      autoCapitalize="none"
-                      // value={this.state.cvc}
-                      // onChangeText={cvc => this.setState({cvc})}
-                      placeholder="RIM Number"
-                    />
-                  </Item>
-
-                  <Item floatingLabel rounded style={{borderRadius: 20}}>
-                    <Input
-                      autoCorrect={false}
-                      autoCapitalize="none"
-                      // value={this.state.expirationdate}
-                      // onChangeText={expirationdate =>
-                        // this.setState({expirationdate})
-                      // }
-                      placeholder="Phone Number"
-                    />
-                  </Item>
-
-                  <Item floatingLabel rounded style={{borderRadius: 20}}>
-                    <Input
-                      autoCorrect={false}
-                      autoCapitalize="none"
-                      // value={this.state.expirationdate}
-                      // onChangeText={expirationdate =>
-                        // this.setState({expirationdate})
-                      // }
-                      placeholder="Loan Officer"
-                    />
-                  </Item>
-
-                  <Item floatingLabel rounded style={{borderRadius: 20}}>
-                    <Input
-                      autoCorrect={false}
-                      autoCapitalize="none"
-                      // value={this.state.expirationdate}
-                      // onChangeText={expirationdate =>
-                        // this.setState({expirationdate})
-                      // }
-                      placeholder="Email Address"
-                    />
-                  </Item>
-
-                  <Textarea 
-                    rowSpan={5}
-                    bordered rounded
-                    style={{borderRadius:20, marginTop: 10}}
-                    placeholder="Reason for Resructure in Detail..."
-                    // value={this.state.reason}
-                    // onChangeText={(text) => this.reason(text)}
-                  />
-
-                  <Button
-                    transparent
-                    block
-                    large
-                    style={{borderRadius: 20, backgroundColor: '#bacf32', marginTop: 20}}
-                    // disabled={!this.state.cardnumber.length}
-                    onPress={this.payCardHandler}>
-                    <Text style={styles.loginHighlight}>SUBMIT</Text>
-                  </Button>
-                </Form>
-              </View>
-            </View>
-          </ScrollView>
-        </SafeAreaView>
-      </Fragment>
-    );
-  }
-}
-
-class Faqs extends Component {
-  constructor() {
-    super();
-    };
-
-  render() {
-    return (
-      <Fragment>
-        <StatusBar barStyle="dark-content" />
-        <SafeAreaView>
-          <ScrollView
-            contentInsetAdjustmentBehavior="automatic"
-            style={styles.scrollView}>
-            {global.HermesInternal == null ? null : (
-              <View style={styles.engine}>
-                <Text style={styles.footer}>Engine: Hermes</Text>
-              </View>
-            )}
-            <View style={styles.body}>
-              <View style={styles.sectionContainer}>
-                <Text>Frequently Asked Questions</Text>
-              </View>
-            </View>
-          </ScrollView>
-        </SafeAreaView>
-      </Fragment>
-    );
-  }
-}
-
 class RestructureScreen extends Component {
   // get uid() {
   //   return (firebase.auth().currentUser || {}).uid;
+  // }
+
+  // submitRestructureHandler = () => {
+  //   this.props.navigation.navigate('Success');
   // }
 
   componentDidMount() {
@@ -245,7 +48,7 @@ class RestructureScreen extends Component {
   }
 
   goBack = () => {
-    this.props.navigation.navigate('HomeScreen');
+    this.props.navigation.navigate('Home');
   };
 
   handleBackPress = () => {
@@ -263,66 +66,144 @@ class RestructureScreen extends Component {
               onPress={() => this.props.navigation.navigate('Home')}>
               <Icon
                 name="md-arrow-back"
-                style={{color: Platform.OS === 'ios' ? '#bacf32' : '#bacf32'}}
+                style={{color: Platform.OS === 'ios' ? '#1269B1' : '#1269B1'}}
               />
             </Button>
           </Left>
 
           <Body>
             <Title
-              style={{color: Platform.OS === 'ios' ? '#bacf32' : '#bacf32'}}>
-              Loan
+              style={{color: Platform.OS === 'ios' ? '#1269B1' : '#1269B1'}}>
+              Restructure
             </Title>
           </Body>
 
           <Right />
         </Header>
 
-        <Tabs
-          transparent
-          activeTabStyle={{backgroundColor: '#bacf32'}}
-          tabBarUnderlineStyle={{backgroundColor: '#bacf32'}}>
-          <Tab
-            heading="Restructure"
-            style={{fontSize: 8}}
-            tabStyle={{backgroundColor: Colors.white}}
-            activeTabStyle={{backgroundColor: Colors.white}}
-            textStyle={{color: 'grey'}}
-            activeTextStyle={{color: '#bacf32', fontSize: 15}}>
-            <Restructure />
-          </Tab>
-          <Tab
-            heading="FAQs"
-            style={{fontSize: 8}}
-            tabStyle={{backgroundColor: Colors.white}}
-            activeTabStyle={{backgroundColor: Colors.white}}
-            textStyle={{color: 'grey'}}
-            activeTextStyle={{color: '#bacf32', fontSize: 15}}>
-            <Faqs />
-          </Tab>
-        </Tabs>
+        <ScrollView
+          contentInsetAdjustmentBehavior="automatic"
+          style={styles.scrollView}>
 
+          {global.HermesInternal == null ? null : (
+            <View style={styles.engine}>
+              <Text style={styles.footer}>Engine: Hermes</Text>
+            </View>
+          )}
+              <View style={styles.body}>
+                <View style={styles.sectionContainer}>
+                  <Form>
+                    <Item floatingLabel rounded style={{borderRadius: 20}}>
+                      <Input
+                        autoCorrect={false}
+                        autoCapitalize="none"
+                        // value={this.state.name}
+                        // onChangeText={name => this.setState({name})}
+                        placeholder="Name"
+                      />
+                    </Item>
+  
+                    <Item floatingLabel rounded style={{borderRadius: 20}}>
+                      <Input
+                        autoCorrect={false}
+                        autoCapitalize="none"
+                        // value={this.state.cardnumber}
+                        // onChangeText={cardnumber => this.setState({cardnumber})}
+                        placeholder="Account Number"
+                      />
+                    </Item>
+  
+                    <Item floatingLabel rounded style={{borderRadius: 20}}>
+                      <Input
+                        autoCorrect={false}
+                        autoCapitalize="none"
+                        // value={this.state.cvc}
+                        // onChangeText={cvc => this.setState({cvc})}
+                        placeholder="Branch"
+                      />
+                    </Item>
+  
+                    <Item floatingLabel rounded style={{borderRadius: 20}}>
+                      <Input
+                        autoCorrect={false}
+                        autoCapitalize="none"
+                        // value={this.state.expirationdate}
+                        // onChangeText={expirationdate =>
+                          // this.setState({expirationdate})
+                        // }
+                        placeholder="Phone Number"
+                      />
+                    </Item>
+  
+                    <Item floatingLabel rounded style={{borderRadius: 20}}>
+                      <Input
+                        autoCorrect={false}
+                        autoCapitalize="none"
+                        // value={this.state.expirationdate}
+                        // onChangeText={expirationdate =>
+                          // this.setState({expirationdate})
+                        // }
+                        placeholder="Loan Officer (Optional)"
+                      />
+                    </Item>
+  
+                    <Item floatingLabel rounded style={{borderRadius: 20}}>
+                      <Input
+                        autoCorrect={false}
+                        autoCapitalize="none"
+                        // value={this.state.expirationdate}
+                        // onChangeText={expirationdate =>
+                          // this.setState({expirationdate})
+                        // }
+                        placeholder="Email Address (Optional)"
+                      />
+                    </Item>
+  
+                    <Textarea 
+                      rowSpan={5}
+                      bordered rounded
+                      style={{borderRadius:20, marginTop: 10}}
+                      placeholder="Request for Resructure in Detail..."
+                      // value={this.state.reason}
+                      // onChangeText={(text) => this.reason(text)}
+                    />
+  
+                    <Button
+                      transparent
+                      block
+                      large
+                      style={{borderRadius: 20, backgroundColor: '#1269B1', marginTop: 20}}
+                      // disabled={!this.state.cardnumber.length}
+                      // onPress={this.submitRestructureHandler}>
+                      onPress={()=>this.props.navigation.navigate('Success')}>
+                      <Text style={styles.loginHighlight}>SUBMIT</Text>
+                    </Button>
+                  </Form>
+                </View>
+              </View>
+
+          </ScrollView>
         <Footer>
-          <FooterTab style={{backgroundColor: Platform.OS === 'ios' ? Colors.white : '#bacf32'}}>
+          <FooterTab style={{backgroundColor: Colors.white}}>
             <Button
               vertical
               onPress={() => this.props.navigation.navigate('Home')}>
-              <Icon name="home" style={{color: Platform.OS === 'ios' ? 'grey' : Colors.lighter}} />
-              <Text style={{fontSize: 10, color: Platform.OS === 'ios' ? 'grey' : Colors.lighter}}>Home</Text>
+              <Icon name="home" style={{color: 'grey'}} />
+              <Text style={{fontSize: 10, color: 'grey'}}>Home</Text>
             </Button>
             <Button
               vertical
               active
-              style={{backgroundColor: Platform.OS === 'ios' ? Colors.white : '#bacf32'}}
+              style={{backgroundColor: Colors.white}}
               onPress={() => this.props.navigation.navigate('Restructure')}>
-              <Icon active name="paper" style={{color: Platform.OS === 'ios' ? '#bacf32' : Colors.white}} />
-              <Text style={{fontSize: 10, color: Platform.OS === 'ios' ? '#bacf32' : Colors.white}}>Restructure</Text>
+              <Icon active name="paper" style={{color: '#1269B1'}} />
+              <Text style={{fontSize: 10, color: '#1269B1'}}>Restructure</Text>
             </Button>
             <Button
               vertical
               onPress={() => this.props.navigation.navigate('Help')}>
-              <Icon name="more" style={{color: Platform.OS === 'ios' ? 'grey' : Colors.lighter}} />
-              <Text style={{fontSize: 10, color: Platform.OS === 'ios' ? 'grey' : Colors.lighter}}>Help</Text>
+              <Icon name="more" style={{color: 'grey'}} />
+              <Text style={{fontSize: 10, color: 'grey'}}>Help</Text>
             </Button>
           </FooterTab>
         </Footer>
@@ -387,7 +268,7 @@ const styles = StyleSheet.create({
     marginTop: 8,
     fontSize: 18,
     fontWeight: '400',
-    color: '#bacf32',
+    color: '#1269B1',
     textAlign: 'center',
   },
   highlight: {
